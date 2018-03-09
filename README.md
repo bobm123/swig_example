@@ -1,4 +1,4 @@
-"# swig_example" 
+# swig_example 
 Running the swig example of C and Python from the basic tutorial found here:
 http://www.swig.org/tutorial.html
 
@@ -10,19 +10,20 @@ https://stackoverflow.com/questions/44419199/windows-and-python-2-7-x-how-to-loa
 
 This repository contains the project that results. So far I've tested it with Python 3.6 and Visual Studio 2017.
 
-- Skip step 16 (right-click example.i and compile). Instead run it from the command line in the same directory as example.i to generate example_swig.c for the next few steps. You may have to create the release folder first so swig can put example.py there.
+- Skip step 16 (right-click example.i and compile). Instead, generate example_swig.c by running it from the command line in project directory. You may have to create the Release directory first so swig can put example.py there.
 
-swig -python -outdir Release example.i
+`swig -python -outdir Release example.i`
 
 - The instructions are for C++ while the swig example shows a C file. He makes a note of this in the stack overflow answer, but I missed that the first time though. If you do want C++, the command line above (and the one added to the Custom Build Tool for example.i) will have "-c++" in it.
 
-swig -c++ -python -outdir Release example.i
+`swig -c++ -python -outdir Release example.i`
 
 - The linker originally issued this warning:
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification
 
 So I added the following to the project Properties>>Linker>>Command Line>>Additional Options
-/opt:noicf /opt:noref
+
+`/opt:noicf /opt:noref`
 
 ## My Results
 ```
