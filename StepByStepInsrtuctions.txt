@@ -4,7 +4,7 @@ http://www.swig.org/tutorial.html
 Making it work for Python3 and Visual Studio 2017 using step-by-step instructions in answer here:
 https://stackoverflow.com/questions/11693047/how-to-create-a-dll-with-swig-from-visual-studio-2010/11732619
 
-Also note, output DLL extension must be .pyd, (don't forget step 14)see also:
+Also note, output DLL extension must be .pyd, (don't forget step 24) see also:
 https://stackoverflow.com/questions/44419199/windows-and-python-2-7-x-how-to-load-and-deploy-a-swig-generated-module
 
 Step-by-step instructions. This assumes you have the source and are building a single DLL extension that links the source directly into it. I didn't go back through it after creating a working project, so I may have missed something. Comment on this post if you get stuck on a step. If you have an existing DLL and want to create a Python extension DLL that wraps it, this steps are slightly different. If you need help with that comment on this post and I will extend it.
