@@ -1,0 +1,7 @@
+# Ignore some stuff Visual Studio generates
+Release
+*.vcxproj.user
+.vs
+
+# Ignore Swig generate files
+*_wrap.c*
